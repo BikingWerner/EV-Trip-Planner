@@ -3,20 +3,24 @@
 <html lang="nl">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>EV Trip Planner</title>
 
+
     <!-- Leaflet kaart -->
     <link 
-        rel="stylesheet" 
+        rel="stylesheet"
         href="https://unpkg.com/leaflet/dist/leaflet.css"
     >
 
+
     <!-- Eigen stijl -->
     <link 
-        rel="stylesheet" 
+        rel="stylesheet"
         href="css/style.css"
     >
 
@@ -24,158 +28,223 @@
 
 
 <body>
-<h1 style="color:red;">TEST UPDATE</h1>
-    
+
+
 <header>
-    <h1>EV Trip Planner TEST</h1>
-    <p>Plan your electric vehicle journey</p>
+
+    <h1>EV Trip Planner</h1>
+
+    <p>
+        Plan your electric vehicle journey
+    </p>
+
 </header>
+
 
 
 <main class="container">
 
 
-    <section class="card">
 
-        <h2>New Trip</h2>
+<section class="card">
 
 
-        <label for="from">
-            From
+    <h2>New Trip</h2>
+
+
+    <label for="from">
+        From
+    </label>
+
+    <input
+        id="from"
+        type="text"
+        placeholder="Departure location"
+    >
+
+
+
+    <label for="to">
+        Destination
+    </label>
+
+    <input
+        id="to"
+        type="text"
+        placeholder="Destination"
+    >
+
+
+
+    <label for="distance">
+        Target distance between charging stops (km)
+    </label>
+
+    <input
+        id="distance"
+        type="number"
+        value="200"
+    >
+
+
+
+    <label for="detour">
+        Maximum detour (km)
+    </label>
+
+    <input
+        id="detour"
+        type="number"
+        value="5"
+    >
+
+
+
+    <label for="power">
+        Minimum charging power (kW)
+    </label>
+
+    <input
+        id="power"
+        type="number"
+        value="150"
+    >
+
+
+
+    <h3>
+        Preferred charging networks
+    </h3>
+
+
+
+    <div class="options">
+
+
+        <label>
+            <input 
+                type="checkbox"
+                checked
+            >
+            Ionity
         </label>
 
-        <input 
-            id="from"
-            type="text"
-            placeholder="Departure location"
-        >
 
 
-        <label for="to">
-            Destination
+        <label>
+            <input 
+                type="checkbox"
+                checked
+            >
+            Fastned
         </label>
 
-        <input 
-            id="to"
-            type="text"
-            placeholder="Destination"
-        >
 
 
-        <label for="distance">
-            Target distance between charging stops (km)
+        <label>
+            <input 
+                type="checkbox"
+            >
+            Tesla
         </label>
 
-        <input 
-            id="distance"
-            type="number"
-            value="200"
-        >
 
 
-        <label for="detour">
-            Maximum detour (km)
+        <label>
+            <input 
+                type="checkbox"
+                checked
+            >
+            Allego
         </label>
 
-        <input 
-            id="detour"
-            type="number"
-            value="5"
-        >
 
 
-        <label for="power">
-            Minimum charging power (kW)
+        <label>
+            <input 
+                type="checkbox"
+            >
+            EnBW
         </label>
 
-        <input 
-            id="power"
-            type="number"
-            value="150"
-        >
 
-
-        <h3>Preferred charging networks</h3>
-
-
-        <div class="options">
-
-            <label>
-                <input type="checkbox" checked>
-                Ionity
-            </label>
-
-
-            <label>
-                <input type="checkbox" checked>
-                Fastned
-            </label>
-
-
-            <label>
-                <input type="checkbox">
-                Tesla
-            </label>
-
-
-            <label>
-                <input type="checkbox" checked>
-                Allego
-            </label>
-
-
-            <label>
-                <input type="checkbox">
-                EnBW
-            </label>
-
-        </div>
-
-
-        <button id="calculateButton">
-            Calculate route
-        </button>
-
-
-    </section>
+    </div>
 
 
 
-    <section class="card">
+    <button id="calculateButton">
 
-        <h2>Route map</h2>
+        Calculate route
 
-        <div id="map"></div>
-
-    </section>
+    </button>
 
 
 
-    <section class="card">
+</section>
 
-        <h2>Route information</h2>
 
-        <div id="results">
-            Enter a route and calculate.
-        </div>
 
-    </section>
+
+
+<section class="card">
+
+
+    <h2>
+        Route map
+    </h2>
+
+
+    <div id="map"></div>
+
+
+</section>
+
+
+
+
+
+<section class="card">
+
+
+    <h2>
+        Route information
+    </h2>
+
+
+    <div id="results">
+
+        Enter a route and calculate.
+
+    </div>
+
+
+</section>
+
 
 
 </main>
 
 
 
-<!-- Leaflet -->
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-<!-- Test -->
-<script>
-alert("index.html scripts gestart");
+
+<!-- Leaflet -->
+
+<script
+    src="https://unpkg.com/leaflet/dist/leaflet.js">
 </script>
 
+
+
+
 <!-- Eigen scripts -->
+
+<script src="js/config.js"></script>
+
+<script src="js/map.js"></script>
+
 <script src="js/app.js"></script>
+
 
 
 </body>
