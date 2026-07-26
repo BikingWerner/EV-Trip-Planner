@@ -1,4 +1,3 @@
-alert("nieuwe app.js geladen");
 
 document.addEventListener(
     "DOMContentLoaded",
