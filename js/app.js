@@ -13,13 +13,16 @@ document.addEventListener(
 
         button.addEventListener(
             "click",
-            function () {
+            async function () {
 
 const from = document.getElementById("from").value;
 const to = document.getElementById("to").value;
 const distance = document.getElementById("distance").value;
 const detour = document.getElementById("detour").value;
 const power = document.getElementById("power").value;
+
+
+const route = await calculateRoute(from, to);
 
 
 document.getElementById("results").innerHTML =
@@ -30,7 +33,9 @@ document.getElementById("results").innerHTML =
     Destination: ${to}<br>
     Charging interval: ${distance} km<br>
     Maximum detour: ${detour} km<br>
-    Minimum charging power: ${power} kW
+    Minimum charging power: ${power} kW<br><br>
+
+    ${route.message}
     `;
 
 
