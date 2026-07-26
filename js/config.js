@@ -31,3 +31,4 @@ const DEFAULT_SETTINGS = {
 
 };
 ```
+alert("config geladen");
