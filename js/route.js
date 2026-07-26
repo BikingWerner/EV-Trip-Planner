@@ -3,7 +3,7 @@ async function calculateRoute(from, to) {
 
     const url =
         "https://api.openrouteservice.org/geocode/search?api_key="
-        + ORS_API_KEY
+        + window.ORS_API_KEY
         + "&text=";
 
 
@@ -40,7 +40,7 @@ async function calculateRoute(from, to) {
                 method: "POST",
 
                 headers: {
-                    "Authorization": ORS_API_KEY,
+                    "Authorization": window.ORS_API_KEY,
                     "Content-Type": "application/json"
                 },
 
