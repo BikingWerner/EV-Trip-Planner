@@ -1,4 +1,7 @@
 ```javascript
+
+alert("app.js geladen");
+
 // EV Trip Planner
 // Application controller
 // Version 0.2
