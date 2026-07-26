@@ -1,29 +1,32 @@
-alert("app.js geladen");
+// EV Trip Planner
+// Application controller
+// Version 0.2
 
 
 document.addEventListener(
     "DOMContentLoaded",
     function () {
 
-        alert("pagina klaar");
+
+        initializeMap();
 
 
-        const button = document.getElementById(
-            "calculateButton"
-        );
-
-
-        alert(button);
+        const button =
+            document.getElementById("calculateButton");
 
 
         button.addEventListener(
             "click",
             function () {
 
-                alert("Knop werkt!");
+
+                document.getElementById("results").innerHTML =
+                "Knop werkt!";
+
 
             }
         );
+
 
     }
 );
