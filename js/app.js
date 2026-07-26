@@ -1,6 +1,3 @@
-alert("app.js geladen");
-
-
 document.addEventListener(
     "DOMContentLoaded",
     function () {
