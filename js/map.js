@@ -1,6 +1,4 @@
 
-alert("map.js geladen");
-
 let map;
 
 
