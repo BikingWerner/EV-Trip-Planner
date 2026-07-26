@@ -1,20 +1,26 @@
+alert("app.js geladen");
+
+
 document.addEventListener(
     "DOMContentLoaded",
     function () {
 
-        initializeMap();
+        alert("pagina klaar");
 
 
-        const button =
-            document.getElementById("calculateButton");
+        const button = document.getElementById(
+            "calculateButton"
+        );
+
+
+        alert(button);
 
 
         button.addEventListener(
             "click",
             function () {
 
-                document.getElementById("results").innerHTML =
-                "Knop werkt!";
+                alert("Knop werkt!");
 
             }
         );
