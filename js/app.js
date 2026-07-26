@@ -1,12 +1,8 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
 
-    const button = document.getElementById("calculateButton");
+        initializeMap();
 
-    button.addEventListener("click", function () {
-
-        document.getElementById("results").innerHTML =
-            "Knop werkt!";
-
-    });
-
-});
+    }
+);
