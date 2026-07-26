@@ -24,7 +24,21 @@ document.addEventListener(
                 const power = document.getElementById("power").value;
 
 
-                const route = await calculateRoute(from, to);
+                let route;
+
+try {
+
+    route = await calculateRoute(from, to);
+
+}
+catch (error) {
+
+    document.getElementById("results").innerHTML =
+        "Fout bij routeberekening: " + error.message;
+
+    return;
+
+}
 
 
                 document.getElementById("results").innerHTML =
