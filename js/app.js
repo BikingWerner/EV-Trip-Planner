@@ -15,28 +15,29 @@ document.addEventListener(
             "click",
             async function () {
 
-const from = document.getElementById("from").value;
-const to = document.getElementById("to").value;
-const distance = document.getElementById("distance").value;
-const detour = document.getElementById("detour").value;
-const power = document.getElementById("power").value;
+
+                const from = document.getElementById("from").value;
+                const to = document.getElementById("to").value;
+                const distance = document.getElementById("distance").value;
+                const detour = document.getElementById("detour").value;
+                const power = document.getElementById("power").value;
 
 
-const route = await calculateRoute(from, to);
+                const route = await calculateRoute(from, to);
 
 
-document.getElementById("results").innerHTML =
-    `
-    <strong>Trip information</strong><br><br>
+                document.getElementById("results").innerHTML =
+                    `
+                    <strong>Trip information</strong><br><br>
 
-    From: ${from}<br>
-    Destination: ${to}<br>
-    Charging interval: ${distance} km<br>
-    Maximum detour: ${detour} km<br>
-    Minimum charging power: ${power} kW<br><br>
+                    From: ${from}<br>
+                    Destination: ${to}<br>
+                    Charging interval: ${distance} km<br>
+                    Maximum detour: ${detour} km<br>
+                    Minimum charging power: ${power} kW<br><br>
 
-    ${route.message}
-    `;
+                    Route received
+                    `;
 
 
             }
