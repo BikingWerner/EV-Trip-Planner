@@ -7,16 +7,24 @@ async function calculateRoute(from, to) {
         + "&text=";
 
 
-    const fromResponse =
-        await fetch(url + encodeURIComponent(from));
+console.log("Geocoding from:", from);
+
+const fromResponse =
+    await fetch(url + encodeURIComponent(from));
+
+console.log("From response:", fromResponse);
 
 
     const fromData =
         await fromResponse.json();
 
 
-    const toResponse =
-        await fetch(url + encodeURIComponent(to));
+    console.log("Geocoding to:", to);
+
+const toResponse =
+    await fetch(url + encodeURIComponent(to));
+
+console.log("To response:", toResponse);
 
 
     const toData =
@@ -33,6 +41,7 @@ async function calculateRoute(from, to) {
 
 
 
+    console.log("Requesting route...");
     const routeResponse =
         await fetch(
             "https://api.openrouteservice.org/v2/directions/driving-car/geojson",
