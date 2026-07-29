@@ -21,14 +21,17 @@ console.log("From response:", fromResponse);
 
     console.log("Geocoding to:", to);
 
-const toResponse =
-    await fetch(url + encodeURIComponent(to));
-
-console.log("To response:", toResponse);
-
-
-    const toData =
-        await toResponse.json();
+    
+    const toResponse = await fetch(
+    "https://api.openrouteservice.org/geocode/search?text=" +
+    encodeURIComponent(to),
+    {
+        headers: {
+            "Authorization": window.ORS_API_KEY,
+            "Accept": "application/json"
+        }
+    }
+);
 
 
 
