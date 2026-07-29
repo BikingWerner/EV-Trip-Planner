@@ -1,16 +1,16 @@
 async function calculateRoute(from, to) {
 
 
-    const url =
-        "https://api.openrouteservice.org/geocode/search?api_key="
-        + window.ORS_API_KEY
-        + "&text=";
-
-
-console.log("Geocoding from:", from);
-
-const fromResponse =
-    await fetch(url + encodeURIComponent(from));
+const fromResponse = await fetch(
+    "https://api.openrouteservice.org/geocode/search?text=" +
+    encodeURIComponent(from),
+    {
+        headers: {
+            "Authorization": window.ORS_API_KEY,
+            "Accept": "application/json"
+        }
+    }
+);
 
 console.log("From response:", fromResponse);
 
